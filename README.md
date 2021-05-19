@@ -1,17 +1,37 @@
+---
+tags: ["aws", "app-runner", "containers"]
+summary: "learn AWS App Runner"
+---
+
 # aws-app-runner-playground
 
 learn [AWS App Runner](https://aws.amazon.com/blogs/containers/introducing-aws-app-runner/)
 
-* autoscale, no clusters
+## Comments
+
+* good service to get users *"closer"* to serverless on eases the onboarding to AWS for solutions
+* less knobs/options to turn/get wrong
+* it's [cheap](https://aws.amazon.com/apprunner/pricing/), but not as cheap as lambda.
+* public only endpoints for now
+* similar goals and roadmap as [GCP Cloud Run](https://cloud.google.com/run) *(AWS is playing catch-up)*
+* [More choices](https://twitter.com/jrhunt/status/1394797751880208384?s=20) for containers and potentially confusing for customers (*container options menu is getting pretty big*)
+## Notes
+
+* prefer App Runner AWS managed container runtimes (e.g. [Node](https://docs.aws.amazon.com/apprunner/latest/dg/service-source-code-nodejs.html) and [Python](https://docs.aws.amazon.com/apprunner/latest/dg/service-source-code-python.html)).  Similar to lambda, ElasticBeanstalk, CloudFoundry, Heroku, etc.
+* aws takes care of / not your responsibility
+    * load balanced
+    * autoscale
+    * no clusters
 * `apprunner.yaml`
 * connect directly to github
-* configure see [Create a source code repository service](https://docs.aws.amazon.com/apprunner/latest/api/API_CreateService.html#API_CreateService_Example_1) for all options
+* config options
     * health check config
     * cpu, memory
     * instance role
+    > see [Create a source code repository service](https://docs.aws.amazon.com/apprunner/latest/api/API_CreateService.html#API_CreateService_Example_1) for all options
 * custom domain support
-* [Node](https://docs.aws.amazon.com/apprunner/latest/dg/service-source-code-nodejs.html) and [Python](https://docs.aws.amazon.com/apprunner/latest/dg/service-source-code-python.html) managed container runtimes to start.
-* public endpoints only (as of 2021-05-18)
+* [Node](https://docs.aws.amazon.com/apprunner/latest/dg/service-source-code-nodejs.html) and [Python](https://docs.aws.amazon.com/apprunner/latest/dg/service-source-code-python.html) managed container runtimes to start.  Planned to support and follow order of [lambda supported runtimes](https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html).
+* public endpoints only (as of 2021-05-18) - see [roadmap](https://github.com/aws/apprunner-roadmap/projects/1) [`#1`](https://github.com/aws/apprunner-roadmap/issues/1), [`#2`](https://github.com/aws/apprunner-roadmap/issues/2) for private endpoints and access to VPC resources.
 
 ## Pricing
 
@@ -21,9 +41,10 @@ learn [AWS App Runner](https://aws.amazon.com/blogs/containers/introducing-aws-a
 ## Resources
 
 * [Introducing AWS App Runner](https://aws.amazon.com/blogs/containers/introducing-aws-app-runner/)
+* [Hello AWS App Runner](https://www.youtube.com/watch?v=HJsULvSJWes) - youtube
 * [Documentation | AWS App Runner](https://docs.aws.amazon.com/apprunner/latest/dg/what-is-apprunner.html)
 * [aws-containers/apprunnerworkshop](https://github.com/aws-containers/apprunnerworkshop)
-* [apprunner-roadmap](https://github.com/aws/apprunner-roadmap/projects/1)
+* [apprunner-roadmap](https://github.com/aws/apprunner-roadmap/projects/1) - vote up issues important to your needs
 * [aws-containers/hello-app-runner](https://github.com/aws-containers/hello-app-runner)
 * [AWS App Runner API Reference](https://docs.aws.amazon.com/apprunner/latest/api/Welcome.html)
 * [Pricing](https://aws.amazon.com/apprunner/pricing/)
