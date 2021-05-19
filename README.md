@@ -13,13 +13,11 @@ learn [AWS App Runner](https://aws.amazon.com/blogs/containers/introducing-aws-a
 * [Node](https://docs.aws.amazon.com/apprunner/latest/dg/service-source-code-nodejs.html) and [Python](https://docs.aws.amazon.com/apprunner/latest/dg/service-source-code-python.html) managed container runtimes to start.
 * public endpoints only (as of 2021-05-18)
 
-
 ## Pricing
 
 > You are charged for the compute and memory resources used by your application. In addition, if you automate your deployments, you will pay a set monthly fee for each application that covers all automated deployments for that month. If you opt to deploy from source code, you will pay a build fee for the amount of time it takes App Runner to build a container from your source code.
 
 ---
-
 ## Resources
 
 * [Introducing AWS App Runner](https://aws.amazon.com/blogs/containers/introducing-aws-app-runner/)
