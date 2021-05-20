@@ -7,17 +7,6 @@ summary: "learn AWS App Runner"
 # aws-app-runner-playground
 
 learn [AWS App Runner](https://aws.amazon.com/blogs/containers/introducing-aws-app-runner/)
-
-## Demo
-
-```sh
-mkdir hello-app-runner
-touch apprunner.yaml
-
-```
-
----
-
 ## Comments
 
 * good service to get users *"closer"* to serverless on eases the onboarding to AWS for solutions
@@ -31,6 +20,7 @@ touch apprunner.yaml
 ## Notes
 
 * prefer App Runner AWS managed container runtimes (e.g. [Node](https://docs.aws.amazon.com/apprunner/latest/dg/service-source-code-nodejs.html) and [Python](https://docs.aws.amazon.com/apprunner/latest/dg/service-source-code-python.html)).  Similar to lambda, ElasticBeanstalk, CloudFoundry, Heroku, etc.
+* App Runner product manager said the managed container runtimes as based on elastic beanstalk. (source video - [AWS App Runner Workshop](https://www.youtube.com/watch?v=97Ua6Gv_HSo))
 * aws takes care of / not your responsibility
     * load balanced
     * autoscale
@@ -46,9 +36,29 @@ touch apprunner.yaml
 * [Node](https://docs.aws.amazon.com/apprunner/latest/dg/service-source-code-nodejs.html) and [Python](https://docs.aws.amazon.com/apprunner/latest/dg/service-source-code-python.html) managed container runtimes to start.  Planned to support and follow order of [lambda supported runtimes](https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html).
 * public endpoints only (as of 2021-05-18) - see [roadmap](https://github.com/aws/apprunner-roadmap/projects/1) [`#1`](https://github.com/aws/apprunner-roadmap/issues/1), [`#2`](https://github.com/aws/apprunner-roadmap/issues/2) for private endpoints and access to VPC resources.
 
+---
 ## Pricing
 
 > You are charged for the compute and memory resources used by your application. In addition, if you automate your deployments, you will pay a set monthly fee for each application that covers all automated deployments for that month. If you opt to deploy from source code, you will pay a build fee for the amount of time it takes App Runner to build a container from your source code.
+
+---
+## Demo
+
+```sh
+mkdir hello-app-runner
+touch apprunner.yaml
+
+# install venv and deps
+pipenv install
+
+# run locally
+pipenv run python app.py
+
+# deploy
+SERVICE_NAME="hello-app-runner-01"
+aws apprunner create-service --service-name ${SERVICE_NAME} \
+    --source-configuration file://apprunner.yaml
+```
 
 ---
 ## Resources
