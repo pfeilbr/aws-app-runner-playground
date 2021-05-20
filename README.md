@@ -7,6 +7,16 @@ summary: "learn AWS App Runner"
 
 learn [AWS App Runner](https://aws.amazon.com/blogs/containers/introducing-aws-app-runner/)
 
+## Demo
+
+```sh
+mkdir hello-app-runner
+touch apprunner.yaml
+
+```
+
+---
+
 ## Comments
 
 * good service to get users *"closer"* to serverless on eases the onboarding to AWS for solutions
@@ -15,6 +25,8 @@ learn [AWS App Runner](https://aws.amazon.com/blogs/containers/introducing-aws-a
 * public only endpoints for now
 * similar goals and roadmap as [GCP Cloud Run](https://cloud.google.com/run) *(AWS is playing catch-up)*
 * [More choices](https://twitter.com/jrhunt/status/1394797751880208384?s=20) for containers and potentially confusing for customers (*container options menu is getting pretty big*)
+
+---
 ## Notes
 
 * prefer App Runner AWS managed container runtimes (e.g. [Node](https://docs.aws.amazon.com/apprunner/latest/dg/service-source-code-nodejs.html) and [Python](https://docs.aws.amazon.com/apprunner/latest/dg/service-source-code-python.html)).  Similar to lambda, ElasticBeanstalk, CloudFoundry, Heroku, etc.
@@ -22,7 +34,7 @@ learn [AWS App Runner](https://aws.amazon.com/blogs/containers/introducing-aws-a
     * load balanced
     * autoscale
     * no clusters
-* `apprunner.yaml`
+* [App Runner configuration file (`apprunner.yaml`)](https://docs.aws.amazon.com/apprunner/latest/dg/config-file.html) -
 * connect directly to github
 * config options
     * health check config
@@ -42,6 +54,7 @@ learn [AWS App Runner](https://aws.amazon.com/blogs/containers/introducing-aws-a
 
 * [Introducing AWS App Runner](https://aws.amazon.com/blogs/containers/introducing-aws-app-runner/)
 * [Hello AWS App Runner](https://www.youtube.com/watch?v=HJsULvSJWes) - youtube
+* [AWS App Runner Workshop](https://www.youtube.com/watch?v=97Ua6Gv_HSo) - youtube.  good details on roadmap.  aws tech pm is a part of it.
 * [Documentation | AWS App Runner](https://docs.aws.amazon.com/apprunner/latest/dg/what-is-apprunner.html)
 * [aws-containers/apprunnerworkshop](https://github.com/aws-containers/apprunnerworkshop)
 * [apprunner-roadmap](https://github.com/aws/apprunner-roadmap/projects/1) - vote up issues important to your needs
