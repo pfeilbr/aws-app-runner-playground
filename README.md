@@ -1,8 +1,9 @@
+<!--
 ---
 tags: ["aws", "app-runner", "containers"]
 summary: "learn AWS App Runner"
 ---
-
+-->
 # aws-app-runner-playground
 
 learn [AWS App Runner](https://aws.amazon.com/blogs/containers/introducing-aws-app-runner/)
