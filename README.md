@@ -1,9 +1,3 @@
-<!--
----
-tags: ["aws", "app-runner", "containers"]
-summary: "learn AWS App Runner"
----
--->
 # aws-app-runner-playground
 
 learn [AWS App Runner](https://aws.amazon.com/blogs/containers/introducing-aws-app-runner/)
@@ -72,3 +66,10 @@ aws apprunner create-service --service-name ${SERVICE_NAME} \
 * [aws-containers/hello-app-runner](https://github.com/aws-containers/hello-app-runner)
 * [AWS App Runner API Reference](https://docs.aws.amazon.com/apprunner/latest/api/Welcome.html)
 * [Pricing](https://aws.amazon.com/apprunner/pricing/)
+
+<!--
+---
+tags: ["aws", "app-runner", "containers"]
+summary: "learn AWS App Runner"
+---
+-->
